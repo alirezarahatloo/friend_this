@@ -1,3 +1,4 @@
+
 #include "Myclass.h"
 #include <iostream>
 using namespace std;
@@ -17,5 +18,37 @@ void shift(MyClass &p,int step)
 }
 void MyClass::printInfo()
 {
-    cout << this->regVar; //The this stores the address of the current object.
+    cout << this->regVar << "\n"; //The this stores the address of the current object.
+}
+void MyClass::setVar(int s)
+{
+    regVar = s;
+}
+int MyClass::getVar()
+{
+    return regVar;
+}
+
+BaseClass::BaseClass()
+{
+    cout << "Baseclass\n";
+}
+void BaseClass :: printff()
+{
+    cout << "alireza";
+}
+HerClass::HerClass()
+{
+    cout << "Herclass\n";
+}
+
+void HerClass::print_alireza()
+{
+
+}
+
+void HerClass::printff()
+{
+    cout << "hello";
+    BaseClass::printff();
 }
